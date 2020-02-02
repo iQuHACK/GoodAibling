@@ -1,0 +1,56 @@
+import quantum_functions as qf
+qs = qf.QState(qubit number, ancilla bits, classical bits) # for now, let's just do one ancilla and one classical bit
+
+STARTUP LOGIC
+
+Constructor
+self.qs = QState(number of toggle bottons, 1, 1)
+
+New Game
+qs = self.qs
+qs.x(excluded_bit 1)
+qs.setAndChooseGates(numberofactivequbits**2, excluded_bits)
+qs.makeRandomState(1)
+self.qs = qs
+
+
+
+
+
+LOGIC FOR WHEN ENTER IS PRESSED
+
+Error checking:
+make sure something is pressed.
+determine which buttons are pressed, list of integers (which correspond to qubit numbers), selected_bits
+
+
+if selected_bits > 1:
+	result = qs.measureParity(selected_bits, 1) # 1 is the number of trials
+else:
+	result = qs.measureZ(selected_bits, 1)
+
+
+result is a dict, we then extract the result and perform logic on it
+for res in result: # for loop here is kinda stupid, but was the way to extract res without knowing what it was
+	# res is either 0 or 1, it's the actual result extracted from the dictionary
+	if selected_bits > 1:
+		if res == 1:
+			print 1, and say that the number of mines is odd
+		else:
+			print 0, and say that the number of mines is even
+	else
+		if res == 1:
+			print 1, and say that it is a mine! and you LOSE! maybe
+		else:
+			print 0, and say that it is not a mine! YOU STILL HAVE A JOB!
+			
+Depending on whether the game is lost or won, we need to reinitialize the quantum state
+qs = self.qs
+qs.makeRandomState(0)
+self.qs = qs
+
+
+display result which is either 0 or 1. 
+Include what 0 or 1 means in the text output.
+	
+
