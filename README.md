@@ -1,3 +1,8 @@
+
+_Organizer's note:_ this project won the **industry choice** award in iQuHACK 2020.
+
+---
+
 # Quantum Minesweeper!
 
 Quantum Computing is mind-blowing, right? You know what else is bombastic and led user numbers to explode during the starting days of commercial classical computers? Yes, indeed, it's minesweeper! So let's push minesweeper into a new age of computing to blow up user number once more! 
