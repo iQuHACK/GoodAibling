@@ -1,5 +1,5 @@
 
-_Organizer's note:_ this project won the **industry choice** award in iQuHACK 2020.
+_Organizer's note:_ this project won the **academia choice** award in iQuHACK 2020.
 
 ---
 
